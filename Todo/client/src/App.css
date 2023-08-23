@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #06152c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+}
+
+.alert {
+  padding: 0.8rem;
+  position: fixed;
+  top: 5rem;
+  opacity: 0.9;
+  background: #EBEBEB;
+  color: #333;
+  width: 350px;
+}
+
+.alert-primary {
+  background: #A8F1C6;
+  color: #fff;
+}
+
+.alert-light {
+  background: #EBEBEB;
+  color: #333;
+}
+
+.alert-dark {
+  background: #000;
+  color: #fff;
+}
+
+.alert-danger {
+  background: #F5A8A2;
+  color: #fff;
+}
+
+.alert-success {
+  background: #A8F1C6;
+  color: #fff;
+}
+
+.alert-white {
+  background: #fff;
+  color: #333;
+  border: #ccc solid 1px;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+h2{
+  color: #fff;
+  font-size: 1rem;
+}
+h3{
+  color: #fff;
+  font-size: medium;
+}
+p{
+  color: #fff;
+  font-weight: lighter;
+  font-size: smaller;
+}
+.TodoWrapper {
+  max-height: 70dvh;
+  background: #0b213f;
+  margin-top: 10rem;
+  padding: 2rem;
+  border-radius: 5px;
+  border: 1px solid #183E71;
+  overflow-y: auto;
+}
+.TodoWrapper::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.TodoWrapper::-webkit-scrollbar-thumb {
+  background-color: #183E71; /* Color of the thumb */
+  border-radius: 4px;
+ /* Rounded corners for the thumb */
+}
+
+.TodoWrapper::-webkit-scrollbar-track {
+  background-color: transparent; /* Color of the track */
+}
+
+@media (width<=500px) {
+  .TodoWrapper{
+    background: transparent;
+    border: none;
+  }
+}
+
+.TodoForm ,.RegisterForm{
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+
+.todo-input {
+  outline: none;
+  background: #06152c;
+  border: 1px solid #183E71;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  max-width:  300px;
+  min-width: 270px;
+  color: #fff;
+}
+@media (max-width=500) {
+  .todo-input{
+    max-width: 100px;
+  }
+}
+.input{
+  outline: none;
+  background: #06152c;
+  border: 1px solid #183E71;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 300px;
+  color: #fff;
+}
+.Register{
+  display: flex;
+  flex-direction: row;
+  max-height: 70dvh;
+  background: #0b213f;
+  margin-top: 10rem;
+  padding: 2rem;
+  border-radius: 5px;
+  border: 1px solid #183E71;
+}
+.todo-input::placeholder {
+  color: #ffffff4d;
+}
+
+.todo-btn {
+  background: #183E71;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+}
+.todo-btn:hover{
+  background: #07C4E8;
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #183E71;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+.fa-trash:hover{
+  color: #07C4E8;
+}
+.fa-edit:hover{
+  color: #07C4E8;
+}
+
+.Navbar {
+  color: #fff;
+  border-bottom: 1px solid #183E71;
+  height: 56px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0b213f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 90;
+}
+.logo {
+  height: 80%;
+}
+.Navbar ul{
+  cursor: pointer;
+  display: flex;
+  list-style: none;
+}
+.Navbar a {
+  color: #fff;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+  text-decoration: none;
+}
+.Navbar a:hover{
+  font-weight: 900;
+  color: #07C4E8;
+}
+
+/* Loading */
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
