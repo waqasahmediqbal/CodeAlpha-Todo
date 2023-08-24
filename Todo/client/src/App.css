@@ -149,6 +149,12 @@ p{
   border-radius: 5px;
   border: 1px solid #183E71;
 }
+@media (width<=500px) {
+  .Register{
+    background: transparent;
+    border: none;
+  }
+}
 .todo-input::placeholder {
   color: #ffffff4d;
 }
